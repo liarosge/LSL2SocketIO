@@ -77,9 +77,13 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)external\include\boost_1_61_0;$(SolutionDir)external\include\rapidjson\include;$(SolutionDir)external\include\websocketpp;$(SolutionDir)external\include\liblsl;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)external\lib\boost;$(SolutionDir)external\lib\lsl;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$bin\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -119,12 +123,14 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>boost.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -149,11 +155,20 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="socket.io\internal\sio_client_impl.h" />
+    <ClInclude Include="socket.io\internal\sio_packet.h" />
+    <ClInclude Include="socket.io\sio_client.h" />
+    <ClInclude Include="socket.io\sio_message.h" />
+    <ClInclude Include="socket.io\sio_socket.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LSL2SocketIO.cpp" />
+    <ClCompile Include="socket.io\internal\sio_client_impl.cpp" />
+    <ClCompile Include="socket.io\internal\sio_packet.cpp" />
+    <ClCompile Include="socket.io\sio_client.cpp" />
+    <ClCompile Include="socket.io\sio_socket.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

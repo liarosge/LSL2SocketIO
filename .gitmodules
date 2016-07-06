@@ -1,0 +1,6 @@
+[submodule "external/include/websocketpp"]
+	path = external/include/websocketpp
+	url = https://github.com/liarosge/websocketpp.git
+[submodule "external/include/rapidjson"]
+	path = external/include/rapidjson
+	url = https://github.com/liarosge/rapidjson.git

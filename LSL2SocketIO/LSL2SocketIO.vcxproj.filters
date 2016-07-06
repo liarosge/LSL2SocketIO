@@ -24,12 +24,39 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="socket.io\internal\sio_client_impl.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="socket.io\internal\sio_packet.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="socket.io\sio_client.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="socket.io\sio_message.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="socket.io\sio_socket.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LSL2SocketIO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="socket.io\internal\sio_client_impl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="socket.io\internal\sio_packet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="socket.io\sio_client.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="socket.io\sio_socket.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
