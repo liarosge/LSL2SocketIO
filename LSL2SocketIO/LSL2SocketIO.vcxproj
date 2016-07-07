@@ -77,8 +77,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)external\include\boost_1_61_0;$(SolutionDir)external\include\rapidjson\include;$(SolutionDir)external\include\websocketpp;$(SolutionDir)external\include\liblsl;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)external\lib\boost;$(SolutionDir)external\lib\lsl;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(BOOST_DIR);$(SolutionDir)external\include\rapidjson\include;$(SolutionDir)external\include\websocketpp;$(LSL_DIR)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(BOOST_DIR)\lib;$(LSL_DIR)\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)bin\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
